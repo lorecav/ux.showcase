@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lorenzo Cavalieri – About Me</title>
+  <link rel="stylesheet" href="styles-about.css" />
+</head>
+<body>
+  <div class="background-overlay"></div>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="ux-logo-designer.png" alt="Logo" class="site-logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About me</a></li>
+        <li><a href="contact.html">Contact me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section-wrapper">
+    <h2 id="job">Job experience</h2>
+
+    <button class="collapsible active">
+      <img src="images/hastega.png" alt="hastega logo" class="section-logo" />
+      UX/UI Designer – Hastega (Demcode)
+    </button>
+    <div class="content-collapsible show">
+      <div class="content-inner">
+        <h3>UX/UI Designer</h3>
+        <h4>Hastega (Demcode)</h4>
+        <p>My role revolves around crafting intuitive, user-centered digital experiences that enhance usability, accessibility, and product engagement. I ensure that designs follow best practices and accessibility guidelines (WCAG), creating inclusive and effective interfaces.</p>
+      </div>
+    </div>
+
+    <button class="collapsible">
+      <img src="images/publicis-groupe.jpg" alt="publicis logo" class="section-logo" />
+      Digital Media Planner – Publicis Groupe
+    </button>
+    <div class="content-collapsible">
+      <div class="content-inner">
+        <h3>Digital Media Planner</h3>
+        <h4>Publicis Groupe (Zenith media)</h4>
+        <p>I handled strategy and planning for Paid Social, SEM, and Programmatic campaigns for clients like Unieuro. I also managed analytics and push tools like Airship and Nielsen data interpretation.</p>
+      </div>
+    </div>
+
+    <button class="collapsible">
+      <img src="images/Wolters-Kluwer.png" alt="wk logo" class="section-logo" />
+      Web Content Editor – Wolters Kluwer
+    </button>
+    <div class="content-collapsible">
+      <div class="content-inner">
+        <h3>Web Content Editor</h3>
+        <h4>Wolters Kluwer (CCH Tagetik)</h4>
+        <p>I created and maintained content using Sitecore, trained teams internationally, and managed marketing and analytics tools like Marketo, Mouseflow, Conductor, and Google Analytics.</p>
+      </div>
+    </div>
+
+    <h2 id="studies">Academic background</h2>
+
+    <button class="collapsible">
+      <img src="images/s2i.png" alt="s2i logo" class="section-logo" />
+      UX/UI Design Master – Start2impact
+    </button>
+    <div class="content-collapsible">
+      <div class="content-inner">
+        <h3>UX/UI Design Master</h3>
+        <h4>Start2impact</h4>
+        <p>Topics: Graphic Design, Copywriting, Wireframe, UI, HTML/CSS, Usability Testing. Tools used: Figma, XD, Miro, Photoshop.</p>
+      </div>
+    </div>
+
+    <button class="collapsible">
+      <img src="images/unistrapg-logo.png" alt="Unistrapg logo" class="section-logo" />
+      MA – University of Perugia
+    </button>
+    <div class="content-collapsible">
+      <div class="content-inner">
+        <h3>Advertising Communication (MA)</h3>
+        <h4>University of Perugia</h4>
+        <p>Final dissertation: “Digital Accessibility in public administrations”. Courses: UX/UI, Visual Design, English for Advertising, SEO.</p>
+      </div>
+    </div>
+
+    <button class="collapsible">
+      <img src="images/unipi-logo.svg" alt="Unipi logo" class="section-logo" />
+      BA – University of Pisa
+    </button>
+    <div class="content-collapsible">
+      <div class="content-inner">
+        <h3>Science of Communication (BA)</h3>
+        <h4>University of Pisa</h4>
+        <p>Final dissertation: “Music and advertising – the Shake Remix Vodafone campaign”. Focus on communication and performing arts.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Lorenzo Cavalieri. Tutti i diritti riservati.</p>
+  </footer>
+
+<script>
+  const accordions = document.querySelectorAll(".collapsible");
+
+  accordions.forEach(btn => {
+    btn.addEventListener("click", function () {
+      const currentContent = this.nextElementSibling;
+
+      // Chiudi tutte le altre
+      accordions.forEach(otherBtn => {
+        const otherContent = otherBtn.nextElementSibling;
+        if (otherBtn !== this) {
+          otherBtn.classList.remove("active");
+          otherContent.style.maxHeight = null;
+          otherContent.classList.remove("show");
+        }
+      });
+
+      // Toggle la sezione corrente
+      const isOpen = currentContent.classList.contains("show");
+      if (!isOpen) {
+        this.classList.add("active");
+        currentContent.classList.add("show");
+        currentContent.style.maxHeight = currentContent.scrollHeight + "px";
+      } else {
+        this.classList.remove("active");
+        currentContent.classList.remove("show");
+        currentContent.style.maxHeight = null;
+      }
+    });
+  });
+
+  // Imposta l'altezza iniziale per la sezione aperta di default
+  document.querySelectorAll(".content-collapsible.show").forEach(el => {
+    el.style.maxHeight = el.scrollHeight + "px";
+  });
+</script>
+
+</body>
+</html>
