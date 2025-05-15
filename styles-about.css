@@ -74,11 +74,20 @@ header {
 }
 
 /* INTRO SECTION */
+.intro h2 {
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-align: center;
+}
+
 .intro p {
   font-size: 1.1rem;
   color: #ccc;
   margin-bottom: 30px;
   line-height: 1.6;
+  text-align: center;
 }
 
 /* MAIN CONTENT */
