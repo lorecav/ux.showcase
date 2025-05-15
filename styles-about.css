@@ -73,28 +73,6 @@ header {
   color: #00bfff;
 }
 
-/* INTRO SECTION */
-.intro {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.intro h2 {
-  font-size: 2rem;
-  margin-top: 20px;
-  margin-bottom: 15px;
-  color: #ffffff;
-}
-
-.intro p {
-  font-size: 1.1rem;
-  color: #ccc;
-  margin: 0 auto;
-  max-width: 700px;
-  line-height: 1.6;
-}
-
-
 /* MAIN CONTENT */
 .section-wrapper {
   padding: 40px 20px;
