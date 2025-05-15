@@ -73,6 +73,14 @@ header {
   color: #00bfff;
 }
 
+/* INTRO SECTION */
+.intro p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
 /* MAIN CONTENT */
 .section-wrapper {
   padding: 40px 20px;
