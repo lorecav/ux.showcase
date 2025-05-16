@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Lorenzo Cavalieri</title>
+  <link rel="stylesheet" href="styles-contact.css" />
+</head>
+<body>
+  <div class="background-wrapper">
+    <img src="glassbg.jpg" alt="background" class="bg-img" />
+  </div>
+  <div class="background-overlay"></div>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="ux-logo-designer.png" alt="Logo" class="site-logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="contact.html" class="active">Contact me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section-wrapper">
+    <div class="contact-form-wrapper">
+      <h3>Let’s get in touch</h3>
+      <p class="contact-intro">Interested in working together or want feedback on your project? Fill the form below!</p>
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <input type="hidden" name="access_key" value="1b0aeff3-3821-4f5e-9061-2f6a2ac65806" />
+        
+        <label for="nome">Name and Surname*</label>
+        <input type="text" id="nome" name="nome" required placeholder="Jean Rosseau" />
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required placeholder="j.rosseau@mail.com" />
+
+        <label for="telefono">Phone number *</label>
+        <input type="tel" id="telefono" name="telefono" required placeholder="+39 3882981002" />
+
+        <label for="azienda">Company *</label>
+        <input type="text" id="azienda" name="azienda" required placeholder="Capsule Corporation" />
+
+        <label for="messaggio">Message (optional)</label>
+        <textarea id="messaggio" name="messaggio" rows="4" placeholder="Dear Lorenzo, I would like to express my interest in..."></textarea>
+
+        <button type="submit" class="cta-button">Send</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <a href="http://linkedin.com/in/lorenzo-cavalieri259/" target="_blank">
+      <img src="images/linkedin.png" alt="LinkedIn profile" />
+    </a>
+    <a href="https://www.behance.net/lorenzocavalieri" target="_blank">
+      <img src="images/behance.png" alt="Behance profile" />
+    </a>
+    <a href="https://github.com/lorecav" target="_blank">
+      <img src="images/github.png" alt="GitHub profile" />
+    </a>
+    <p>&copy; 2025 Lorenzo Cavalieri. Tutti i diritti riservati.</p>
+  </footer>
+</body>
+</html>
