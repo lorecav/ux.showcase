@@ -1,108 +1,243 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lorenzo Cavalieri – UX/UI Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="background-wrapper">
-    <img src="glassbg.jpg" alt="background" class="bg-img" />
-  </div>
-  <div class="background-overlay"></div>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <header>
-    <nav class="navbar">
-      <div class="logo-container">
-        <a href="index.html">
-          <img src="ux-logo-designer.png" alt="Logo" class="site-logo" />
-        </a>
-      </div>
+/* BACKGROUND */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  position: relative;
+  min-height: 100vh;
+}
 
-      <!-- Mobile icon -->
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+.background-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
 
-      <!-- Menu desktop -->
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About me</a></li>
-        <li><a href="contact.html">Contact me</a></li>
-      </ul>
-    </nav>
+.background-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
 
-    <!-- Menu mobile -->
-    <div class="mobile-menu" id="mobile-menu">
-      <ul class="mobile-nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About me</a></li>
-        <li><a href="contact.html">Contact me</a></li>
-      </ul>
-    </div>
-  </header>
+.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  <main class="portfolio">
-    <section class="intro">
-      <h1>UX/UI Designer</h1>
-      <p>Experience-driven design, visual minimalism, and functionality.</p>
-    </section>
+/* HEADER */
+header {
+  padding: 20px 40px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1000;
+}
+.logo-container a {
+  display: inline-block;
+}
+.site-logo {
+  width: 40px;
+  height: auto;
+}
 
-    <section class="projects">
-      <div class="project-card">
-        <img src="id-eight.png" alt="UX/UI Redesign – Sneakers E-commerce" />
-        <div class="card-content">
-          <h3>Redesign process</h3>
-          <p>UX/UI redesign for an eco-friendly sneaker brand. Focus on mobile usability and visual impact.</p>
-          <a href="https://www.behance.net/lorenzocavalieri" class="cta-button" target="_blank">View on Behance</a>
-        </div>
-      </div>
+/* MENU TOGGLE BUTTON */
+.menu-toggle {
+  display: none;
+  font-size: 2.2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+  transition: transform 0.3s ease;
+}
 
-      <div class="project-card">
-        <img src="autoscout.png" alt="UX/UI Project" />
-        <div class="card-content">
-          <h3>From research to interface</h3>
-          <p>Full UX and UI design for a car sales platform, from research to responsive high-fidelity prototypes.</p>
-          <a href="https://www.behance.net/lorenzocavalieri" class="cta-button" target="_blank">View on Behance</a>
-        </div>
-      </div>
+/* DESKTOP NAVIGATION */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: #00bfff;
+}
 
-      <div class="project-card">
-        <img src="user-test.png" alt="User Test" />
-        <div class="card-content">
-          <h3>User testing</h3>
-          <p>Usability testing on the mobile purchase flow to improve UX and conversion rates.</p>
-          <a href="https://www.behance.net/lorenzocavalieri" class="cta-button" target="_blank">View on Behance</a>
-        </div>
-      </div>
-    </section>
-  </main>
+/* MOBILE MENU FULLSCREEN */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 999;
+}
 
-  <footer>
-    <p>&copy; 2025 Lorenzo Cavalieri. All rights reserved.</p>
-  </footer>
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: all;
+}
 
-  <script>
-    const toggleBtn = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
+.mobile-nav-links {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
 
-    toggleBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("open");
+.mobile-nav-links li {
+  margin: 20px 0;
+}
 
-      // Cambia icona da ☰ a ✖
-      if (mobileMenu.classList.contains("open")) {
-        toggleBtn.innerHTML = "&times;";
-      } else {
-        toggleBtn.innerHTML = "&#9776;";
-      }
-    });
+.mobile-nav-links a {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
 
-    // Chiude il menu quando si clicca un link
-    document.querySelectorAll(".mobile-nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.remove("open");
-        toggleBtn.innerHTML = "&#9776;";
-      });
-    });
-  </script>
-</body>
-</html>
+.mobile-nav-links a:hover,
+.mobile-nav-links a.active {
+  color: #00bfff;
+}
+
+/* INTRO SECTION */
+.intro {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+.intro h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.intro p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* PROJECTS SECTION */
+.projects {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0 40px 60px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  max-width: 300px;
+  backdrop-filter: blur(10px);
+  flex: 1 1 300px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+.cta-button {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #00bfff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #009acd;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+  .intro h1 {
+    font-size: 2.2rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .projects {
+    padding: 0 20px 60px;
+  }
+}
