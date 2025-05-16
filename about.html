@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lorenzo Cavalieri – About Me</title>
   <link rel="stylesheet" href="styles-about.css" />
 </head>
 <body>
-    <div class="background-wrapper">
+  <div class="background-wrapper">
     <img src="glassbg.jpg" alt="background" class="bg-img" />
   </div>
   <div class="background-overlay"></div>
@@ -15,37 +15,51 @@
   <header>
     <nav class="navbar">
       <div class="logo-container">
-        <img src="ux-logo-designer.png" alt="Logo" class="site-logo" />
+        <a href="index.html">
+          <img src="ux-logo-designer.png" alt="Logo" class="site-logo" />
+        </a>
       </div>
+
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" class="active">About me</a></li>
         <li><a href="contact.html">Contact me</a></li>
       </ul>
     </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About me</a></li>
+        <li><a href="contact.html">Contact me</a></li>
+      </ul>
+    </div>
   </header>
 
   <main class="section-wrapper">
+    <!-- Sezione intro -->
+    <button class="collapsible active">
+      <img src="me.png" alt="photo of Lorenzo" class="section-logo" />
+      I'm Lorenzo Cavalieri, nice to meet you!
+    </button>
+    <div class="content-collapsible show">
+      <div class="content-inner">
+        <h3>User Experience Designer</h3>
+        <h4>Portfolio Introduction</h4>
+        <p>
+          I am a User Experience designer with an academic background in Advertising Communication. I specialize in creating engaging user experiences, blending design and functionality to enhance digital products.
+        </p>
+        <p>
+          Whether you need wireframes, prototypes, or a complete UX strategy, I’m here to help bring your ideas to life. Not only do I design intuitive interfaces — this website is entirely built by me.
+        </p>
+      </div>
+    </div>
 
-<button class="collapsible active">
-  <img src="me.png" alt="photo of Lorenzo" class="section-logo" />
-  I'm Lorenzo Cavalieri, nice to meet you!
-</button>
-<div class="content-collapsible show">
-  <div class="content-inner">
-    <h3>User Experience Designer</h3>
-    <h4>Portfolio Introduction</h4>
-    <p>
-      I am a User Experience designer with an academic background in Advertising Communication. I specialize in creating engaging user experiences, blending design and functionality to enhance digital products.
-    </p>
-    <p>
-      Whether you need wireframes, prototypes, or a complete UX strategy, I’m here to help bring your ideas to life. Not only do I design intuitive interfaces — this website is entirely built by me.
-    </p>
-  </div>
-</div>
+    <!-- Esperienze lavorative -->
+    <h2 id="job">Job experience</h2>
 
-
-  <h2 id="job">Job experience</h2>
     <button class="collapsible">
       <img src="hastega.png" alt="hastega logo" class="section-logo" />
       UX/UI Designer – Hastega (Demcode)
@@ -82,6 +96,7 @@
       </div>
     </div>
 
+    <!-- Studi -->
     <h2 id="studies">Academic background</h2>
 
     <button class="collapsible">
@@ -125,42 +140,58 @@
     <p>&copy; 2025 Lorenzo Cavalieri. Tutti i diritti riservati.</p>
   </footer>
 
-<script>
-  const accordions = document.querySelectorAll(".collapsible");
+  <script>
+    // COLLAPSIBLE
+    const accordions = document.querySelectorAll(".collapsible");
 
-  accordions.forEach(btn => {
-    btn.addEventListener("click", function () {
-      const currentContent = this.nextElementSibling;
+    accordions.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const currentContent = this.nextElementSibling;
 
-      // Chiudi tutte le altre
-      accordions.forEach(otherBtn => {
-        const otherContent = otherBtn.nextElementSibling;
-        if (otherBtn !== this) {
-          otherBtn.classList.remove("active");
-          otherContent.style.maxHeight = null;
-          otherContent.classList.remove("show");
+        // Chiudi tutte le altre
+        accordions.forEach(otherBtn => {
+          const otherContent = otherBtn.nextElementSibling;
+          if (otherBtn !== this) {
+            otherBtn.classList.remove("active");
+            otherContent.style.maxHeight = null;
+            otherContent.classList.remove("show");
+          }
+        });
+
+        // Toggle attuale
+        const isOpen = currentContent.classList.contains("show");
+        if (!isOpen) {
+          this.classList.add("active");
+          currentContent.classList.add("show");
+          currentContent.style.maxHeight = currentContent.scrollHeight + "px";
+        } else {
+          this.classList.remove("active");
+          currentContent.classList.remove("show");
+          currentContent.style.maxHeight = null;
         }
       });
-
-      // Toggle la sezione corrente
-      const isOpen = currentContent.classList.contains("show");
-      if (!isOpen) {
-        this.classList.add("active");
-        currentContent.classList.add("show");
-        currentContent.style.maxHeight = currentContent.scrollHeight + "px";
-      } else {
-        this.classList.remove("active");
-        currentContent.classList.remove("show");
-        currentContent.style.maxHeight = null;
-      }
     });
-  });
 
-  // Imposta l'altezza iniziale per la sezione aperta di default
-  document.querySelectorAll(".content-collapsible.show").forEach(el => {
-    el.style.maxHeight = el.scrollHeight + "px";
-  });
-</script>
+    // Mobile menu toggle
+    const toggleBtn = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
 
+    toggleBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("open");
+      toggleBtn.innerHTML = mobileMenu.classList.contains("open") ? "&times;" : "&#9776;";
+    });
+
+    document.querySelectorAll(".mobile-nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+        toggleBtn.innerHTML = "&#9776;";
+      });
+    });
+
+    // Mostra sezione aperta all'avvio
+    document.querySelectorAll(".content-collapsible.show").forEach(el => {
+      el.style.maxHeight = el.scrollHeight + "px";
+    });
+  </script>
 </body>
 </html>
