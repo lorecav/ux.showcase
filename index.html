@@ -15,14 +15,30 @@
   <header>
     <nav class="navbar">
       <div class="logo-container">
-        <img src="ux-logo-designer.png" alt="Logo" class="site-logo" />
+        <a href="index.html">
+          <img src="ux-logo-designer.png" alt="Logo" class="site-logo" />
+        </a>
       </div>
+
+      <!-- Mobile icon -->
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+      <!-- Menu desktop -->
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About me</a></li>
         <li><a href="contact.html">Contact me</a></li>
       </ul>
     </nav>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu" id="mobile-menu">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="contact.html">Contact me</a></li>
+      </ul>
+    </div>
   </header>
 
   <main class="portfolio">
@@ -45,8 +61,7 @@
         <img src="autoscout.png" alt="UX/UI Project" />
         <div class="card-content">
           <h3>From research to interface</h3>
-         <p>Full UX and UI design for a car sales platform, from research to responsive high-fidelity prototypes.
-        </p>
+          <p>Full UX and UI design for a car sales platform, from research to responsive high-fidelity prototypes.</p>
           <a href="https://www.behance.net/lorenzocavalieri" class="cta-button" target="_blank">View on Behance</a>
         </div>
       </div>
@@ -65,5 +80,29 @@
   <footer>
     <p>&copy; 2025 Lorenzo Cavalieri. All rights reserved.</p>
   </footer>
+
+  <script>
+    const toggleBtn = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    toggleBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("open");
+
+      // Cambia icona da ☰ a ✖
+      if (mobileMenu.classList.contains("open")) {
+        toggleBtn.innerHTML = "&times;";
+      } else {
+        toggleBtn.innerHTML = "&#9776;";
+      }
+    });
+
+    // Chiude il menu quando si clicca un link
+    document.querySelectorAll(".mobile-nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+        toggleBtn.innerHTML = "&#9776;";
+      });
+    });
+  </script>
 </body>
 </html>
