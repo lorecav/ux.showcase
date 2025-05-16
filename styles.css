@@ -44,20 +44,29 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1000;
 }
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.logo-container a {
+  display: inline-block;
 }
 .site-logo {
   width: 40px;
   height: auto;
 }
-.site-name {
-  font-size: 1.4rem;
-  font-weight: bold;
+
+/* MENU TOGGLE BUTTON */
+.menu-toggle {
+  display: none;
+  font-size: 2.2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+  transition: transform 0.3s ease;
 }
+
+/* DESKTOP NAVIGATION */
 .nav-links {
   list-style: none;
   display: flex;
@@ -70,6 +79,53 @@ header {
 }
 .nav-links a:hover,
 .nav-links a.active {
+  color: #00bfff;
+}
+
+/* MOBILE MENU FULLSCREEN */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 999;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.mobile-nav-links li {
+  margin: 20px 0;
+}
+
+.mobile-nav-links a {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.mobile-nav-links a:hover,
+.mobile-nav-links a.active {
   color: #00bfff;
 }
 
@@ -88,7 +144,7 @@ header {
   color: #ccc;
 }
 
-/* PROJECTS */
+/* PROJECTS SECTION */
 .projects {
   display: flex;
   justify-content: center;
@@ -105,6 +161,7 @@ header {
   transition: transform 0.3s ease;
   max-width: 300px;
   backdrop-filter: blur(10px);
+  flex: 1 1 300px;
 }
 
 .project-card:hover {
@@ -134,13 +191,15 @@ header {
 }
 
 .cta-button {
-  display: inline-block;
-  padding: 10px 20px;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
   background-color: #00bfff;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
+  text-align: center;
   transition: background-color 0.3s ease;
 }
 
@@ -154,4 +213,31 @@ footer {
   padding: 20px 0;
   background-color: rgba(0, 0, 0, 0.7);
   font-size: 0.9rem;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+  .intro h1 {
+    font-size: 2.2rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .projects {
+    padding: 0 20px 60px;
+  }
 }
