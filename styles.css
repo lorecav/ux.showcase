@@ -5,25 +5,31 @@
   box-sizing: border-box;
 }
 
-/* BACKGROUND */
 body {
   font-family: 'Segoe UI', sans-serif;
   color: #fff;
   position: relative;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+main {
+  flex-grow: 1;
+}
+
+/* BACKGROUND */
 .background-overlay {
   position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
 
 .background-wrapper {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -40,6 +46,7 @@ body {
 header {
   padding: 20px 40px;
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -48,15 +55,16 @@ header {
   position: relative;
   z-index: 1000;
 }
+
 .logo-container a {
   display: inline-block;
 }
+
 .site-logo {
   width: 40px;
   height: auto;
 }
 
-/* MENU TOGGLE BUTTON */
 .menu-toggle {
   display: none;
   font-size: 2.2rem;
@@ -66,23 +74,23 @@ header {
   transition: transform 0.3s ease;
 }
 
-/* DESKTOP NAVIGATION */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 25px;
 }
+
 .nav-links a {
   text-decoration: none;
   color: white;
   font-weight: 500;
 }
+
 .nav-links a:hover,
 .nav-links a.active {
   color: #00bfff;
 }
 
-/* MOBILE MENU FULLSCREEN */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -129,22 +137,24 @@ header {
   color: #00bfff;
 }
 
-/* INTRO SECTION */
+/* INTRO */
 .intro {
   text-align: center;
   margin-top: 80px;
   margin-bottom: 50px;
 }
+
 .intro h1 {
   font-size: 3rem;
   margin-bottom: 10px;
 }
+
 .intro p {
   font-size: 1.2rem;
   color: #ccc;
 }
 
-/* PROJECTS SECTION */
+/* PROJECTS */
 .projects {
   display: flex;
   justify-content: center;
@@ -207,15 +217,62 @@ header {
   background-color: #009acd;
 }
 
+/* BRANDS SECTION */
+.brands {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.brands h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.brand-logo {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s;
+  filter: brightness(0) invert(1); /* 🔥 Colora di bianco */
+}
+
+.brand-logo:hover {
+  transform: scale(1.05);
+}
+
 /* FOOTER */
 footer {
   text-align: center;
   padding: 20px 0;
   background-color: rgba(0, 0, 0, 0.7);
   font-size: 0.9rem;
+  position: relative;
+  z-index: 10;
 }
 
-/* RESPONSIVE STYLES */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -223,11 +280,7 @@ footer {
 
   .nav-links {
     display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
   }
-}
 
   .intro h1 {
     font-size: 2.2rem;
@@ -239,5 +292,15 @@ footer {
 
   .projects {
     padding: 0 20px 60px;
+  }
+
+  .carousel-track {
+    justify-content: flex-start;
+    padding: 10px;
+  }
+
+  .brand-logo {
+    width: 120px;
+    height: 60px;
   }
 }
