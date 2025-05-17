@@ -21,10 +21,8 @@
         </a>
       </div>
 
-      <!-- Mobile icon -->
       <div class="menu-toggle" id="menu-toggle">&#9776;</div>
 
-      <!-- Menu desktop -->
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About me</a></li>
@@ -32,7 +30,6 @@
       </ul>
     </nav>
 
-    <!-- Menu mobile -->
     <div class="mobile-menu" id="mobile-menu">
       <ul class="mobile-nav-links">
         <li><a href="index.html" class="active">Home</a></li>
@@ -76,34 +73,107 @@
         </div>
       </div>
     </section>
+
+    <!-- BRANDS SECTION -->
+    <section class="brands">
+      <h2>Brands I’ve worked with</h2>
+      <div class="carousel-container">
+        <div class="carousel-track" id="brand-carousel">
+          <img src="images/flowpay.png" alt="Brand 1" class="brand-logo" />
+          <img src="images/canarbino.png" alt="Brand 2" class="brand-logo" />
+          <img src="images/unieuro.png" alt="Brand 3" class="brand-logo" />
+          <img src="images/tke.png" alt="Brand 4" class="brand-logo" />
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Lorenzo Cavalieri. All rights reserved.</p>
   </footer>
 
-  <script>
-    const toggleBtn = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
+  <!-- JAVASCRIPT -->
+ <script>
+  // MENU MOBILE
+  const toggleBtn = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
 
-    toggleBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("open");
+  toggleBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+    toggleBtn.innerHTML = mobileMenu.classList.contains("open") ? "&times;" : "&#9776;";
+  });
 
-      // Cambia icona da ☰ a ✖
-      if (mobileMenu.classList.contains("open")) {
-        toggleBtn.innerHTML = "&times;";
-      } else {
-        toggleBtn.innerHTML = "&#9776;";
+  document.querySelectorAll(".mobile-nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+      toggleBtn.innerHTML = "&#9776;";
+    });
+  });
+
+  // CAROUSEL AUTO-SCROLL SOLO SU MOBILE
+  const carousel = document.getElementById("brand-carousel");
+
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
+
+  let autoScrollInterval;
+  let userIsTouching = false;
+
+  function duplicateLogos() {
+    if (!carousel.classList.contains("duplicated")) {
+      const logos = carousel.innerHTML;
+      carousel.innerHTML += logos;
+      carousel.classList.add("duplicated");
+    }
+  }
+
+  function startAutoScroll() {
+    if (!isMobile()) return; // 🔒 Blocco su desktop
+
+    duplicateLogos();
+    stopAutoScroll();
+
+    let scrollSpeed = 1;
+    autoScrollInterval = setInterval(() => {
+      if (!userIsTouching) {
+        carousel.scrollLeft += scrollSpeed;
+        if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+          carousel.scrollLeft = 0;
+        }
       }
-    });
+    }, 16);
+  }
 
-    // Chiude il menu quando si clicca un link
-    document.querySelectorAll(".mobile-nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.remove("open");
-        toggleBtn.innerHTML = "&#9776;";
-      });
-    });
-  </script>
+  function stopAutoScroll() {
+    clearInterval(autoScrollInterval);
+  }
+
+  // Gestione tocco per interrompere lo scroll
+  carousel.addEventListener("touchstart", () => {
+    userIsTouching = true;
+    stopAutoScroll();
+  });
+
+  carousel.addEventListener("touchend", () => {
+    userIsTouching = false;
+    startAutoScroll();
+  });
+
+  // Avvio al caricamento
+  window.addEventListener("load", () => {
+    if (isMobile()) startAutoScroll();
+  });
+
+  // Gestione resize
+  window.addEventListener("resize", () => {
+    stopAutoScroll(); // Ferma sempre
+    if (isMobile()) {
+      startAutoScroll(); // Riavvia solo su mobile
+    } else {
+      carousel.scrollLeft = 0; // Reset per desktop
+    }
+  });
+</script>
 </body>
 </html>
