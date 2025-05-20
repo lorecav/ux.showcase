@@ -241,8 +241,11 @@ header {
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  -webkit-overflow-scrolling: touch; /* ✅ per iOS */
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  position: relative;
 }
+
 
 .carousel-track::-webkit-scrollbar {
   display: none;
