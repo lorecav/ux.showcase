@@ -160,6 +160,11 @@
     startAutoScroll();
   });
 
+   carousel.addEventListener("touchcancel", () => {
+  userIsTouching = false;
+  startAutoScroll();
+});
+
   // Avvio al caricamento
   window.addEventListener("load", () => {
     if (isMobile()) startAutoScroll();
