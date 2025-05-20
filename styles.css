@@ -236,6 +236,7 @@ header {
 
 .carousel-track {
   display: flex;
+  justify-content: center;
   gap: 40px;
   overflow-x: auto;
   scroll-behavior: smooth;
