@@ -110,15 +110,12 @@
     });
   });
 
-  // CAROUSEL AUTO-SCROLL SOLO SU MOBILE
+  // CAROUSEL AUTO SCROLL - SOLO SU MOBILE
   const carousel = document.getElementById("brand-carousel");
 
   function isMobile() {
     return window.innerWidth <= 768;
   }
-
-  let autoScrollInterval;
-  let userIsTouching = false;
 
   function duplicateLogos() {
     if (!carousel.classList.contains("duplicated")) {
@@ -129,56 +126,29 @@
   }
 
   function startAutoScroll() {
-    if (!isMobile()) return; // 🔒 Blocco su desktop
-
+    if (!isMobile()) return;
     duplicateLogos();
-    stopAutoScroll();
-
-    let scrollSpeed = 1;
-    autoScrollInterval = setInterval(() => {
-      if (!userIsTouching) {
-        carousel.scrollLeft += scrollSpeed;
-        if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
-          carousel.scrollLeft = 0;
-        }
-      }
-    }, 16);
+    carousel.classList.add("auto-scroll");
   }
 
   function stopAutoScroll() {
-    clearInterval(autoScrollInterval);
+    carousel.classList.remove("auto-scroll");
   }
 
-  // Gestione tocco per interrompere lo scroll
-  carousel.addEventListener("touchstart", () => {
-    userIsTouching = true;
-    stopAutoScroll();
-  });
-
-  carousel.addEventListener("touchend", () => {
-    userIsTouching = false;
-    startAutoScroll();
-  });
-
-   carousel.addEventListener("touchcancel", () => {
-  userIsTouching = false;
-  startAutoScroll();
-});
-
-  // Avvio al caricamento
+  // Avvio all'onload
   window.addEventListener("load", () => {
-    if (isMobile()) startAutoScroll();
+    startAutoScroll();
   });
 
   // Gestione resize
   window.addEventListener("resize", () => {
-    stopAutoScroll(); // Ferma sempre
-    if (isMobile()) {
-      startAutoScroll(); // Riavvia solo su mobile
-    } else {
-      carousel.scrollLeft = 0; // Reset per desktop
-    }
+    stopAutoScroll();
+    if (isMobile()) startAutoScroll();
   });
+
+  // Interruzione se l’utente tocca
+  carousel.addEventListener("pointerdown", () => stopAutoScroll());
+  carousel.addEventListener("pointerup", () => startAutoScroll());
 </script>
 </body>
 </html>
