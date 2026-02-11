@@ -1,0 +1,41 @@
+/* =====================================================
+   PRORUN – CASE STUDY CSS
+   Mobile-first, controlled screenshots
+   ===================================================== */
+
+/* Wrapper */
+.case-study {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 120px 24px 160px;
+}
+
+/* Sections */
+.case-section {
+  margin-bottom: 72px;
+}
+
+/* -------------------------------------
+   Screenshots (ProRun specific)
+   ------------------------------------- */
+
+.case-screens img {
+  display: block;
+  width: 100%;
+  max-width: 360px;   /* 👈 key value */
+  height: auto;
+  margin: 32px auto 24px;
+  border-radius: 20px;
+}
+
+/* Optional: group of screens */
+.case-screens.multi img {
+  max-width: 300px;
+}
+
+/* -------------------------------------
+   Text alignment for mobile product
+   ------------------------------------- */
+
+.case-screens {
+  text-a
