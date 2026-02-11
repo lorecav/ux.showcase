@@ -340,9 +340,9 @@ footer {
    =========================== */
 
 .case-study {
-  max-width: 900px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 120px 24px 160px;
+  padding: 120px 32px 160px;
 }
 
 /* Sezioni */
@@ -430,5 +430,6 @@ footer {
     height: 240px;
   }
 }
+
 
 
