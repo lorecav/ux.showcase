@@ -388,6 +388,13 @@ footer {
   line-height: 1.6;
 }
 
+/* Remove bullets from case study lists */
+.case-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+
 /* Sezioni con screenshot */
 .case-screens {
   margin-bottom: 96px;
@@ -433,6 +440,7 @@ footer {
     height: 240px;
   }
 }
+
 
 
 
