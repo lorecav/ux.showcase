@@ -38,4 +38,48 @@
    ------------------------------------- */
 
 .case-screens {
-  text-a
+  text-align: center;
+}
+
+.case-screens p,
+.case-screens ul {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -------------------------------------
+   Responsive adjustments
+   ------------------------------------- */
+
+@media (max-width: 768px) {
+  .case-screens img {
+    max-width: 100%;
+    margin: 24px auto;
+  }
+}
+
+/* ======================================
+   PRO-RUN – MULTI SCREEN ROW (DESKTOP)
+   ====================================== */
+
+.screens-row {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap; /* safety */
+}
+
+/* Images inside row */
+.screens-row img {
+  margin: 32px 0;
+}
+
+/* Mobile: stack again */
+@media (max-width: 768px) {
+  .screens-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
