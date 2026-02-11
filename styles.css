@@ -364,7 +364,7 @@ footer {
 .case-section p {
   color: #cccccc;
   line-height: 1.7;
-  max-width: 720px;
+  max-width: 760px;
 }
 
 /* Meta info (ruolo, contesto, attività) */
@@ -379,7 +379,7 @@ footer {
 .case-section ul {
   margin-top: 16px;
   padding-left: 20px;
-  max-width: 720px;
+  max-width: 760px;
 }
 
 .case-section ul li {
@@ -430,6 +430,7 @@ footer {
     height: 240px;
   }
 }
+
 
 
 
