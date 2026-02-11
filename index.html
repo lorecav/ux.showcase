@@ -2,174 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="ux-logo-designer-favicon.png" type="image/png" />
-  <title>Lorenzo Cavalieri – UX/UI Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lorenzo Cavalieri – Product Designer</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+
+  <!-- BACKGROUND -->
   <div class="background-wrapper">
-    <img src="glassbg.jpg" alt="background" class="bg-img" />
+    <img src="glassbg.jpg" alt="" />
   </div>
   <div class="background-overlay"></div>
 
-  <header>
-    <nav class="navbar">
-      <div class="logo-container">
-        <a href="index.html">
-          <img src="ux-logo-designer.png" alt="Logo" class="site-logo" />
-        </a>
-      </div>
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About me</a></li>
-        <li><a href="contact.html">Contact me</a></li>
-      </ul>
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="logo">LC</a>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
-
-    <div class="mobile-menu" id="mobile-menu">
-      <ul class="mobile-nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About me</a></li>
-        <li><a href="contact.html">Contact me</a></li>
-      </ul>
-    </div>
   </header>
 
-<main class="portfolio">
-<section class="intro">
-  <h1>Product Designer</h1>
-  <p>I design clear and scalable experiences for complex products.<br/>
-    From B2B data-heavy platforms to AI-powered mobile apps. </p>
-</section>
-<section class="intro">
-  <h2>Selected Work</h2>
-  <p>
-    A selection of real-world projects where I worked on complex UX challenges,
-    product decisions and business constraints.
-  </p>
-</section>
-    <section class="projects">
-<div class="project-card">
-  <img src="errequadro.jpg" alt="ErreQuadro B2B SaaS" />
-  <div class="card-content">
-    <h3>ErreQuadro — B2B Data-Heavy Platform</h3>
-    <p>
-      UX design for a complex SaaS platform handling large volumes of structured data.
-      Focus on data tables, design system, and cognitive support for expert users.
-    </p>
-    <a href="errequadro.html" class="cta-button">View Case Study</a>
-  </div>
-</div>
-
-<div class="project-card">
-  <img src="prorun.jpg" alt="ProRun AI Running App" />
-  <div class="card-content">
-    <h3>ProRun — AI-Powered Running App</h3>
-    <p>
-      Mobile product focused on onboarding, motivation and monetization.
-      Designed an AI coach experience balancing user trust and business goals.
-    </p>
-    <a href="prorun.html" class="cta-button">View Case Study</a>
-  </div>
-</div>
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <h1>Product Designer</h1>
+      <p class="hero-subtitle">
+        Designing clear and scalable experiences for complex products.<br />
+        From B2B data-heavy platforms to AI-powered mobile apps.
+      </p>
     </section>
 
-    <!-- BRANDS SECTION -->
-    <section class="brands">
-      <h2>Brands I’ve worked with</h2>
-      <div class="carousel-container">
-        <div class="carousel-track" id="brand-carousel">
-          <img src="flowpay.png" alt="Brand 1" class="brand-logo" />
-          <img src="canarbino.png" alt="Brand 2" class="brand-logo" />
-          <img src="unieuro.png" alt="Brand 3" class="brand-logo" />
-          <img src="tke.png" alt="Brand 4" class="brand-logo" />
-          <img src="municipia.png" alt="Brand 5" class="brand-logo" />
-          <img src="wolterskluwer.png" alt="Brand 6" class="brand-logo" />
+    <!-- INTRO WORK -->
+    <section class="work-intro">
+      <h2>Selected Work</h2>
+      <p>
+        A focused selection of real-world projects where I worked on complex UX problems,
+        product decisions and business constraints.
+      </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects">
+
+      <article class="project-card">
+        <img src="errequadro.jpg" alt="ErreQuadro B2B SaaS" />
+        <div class="project-content">
+          <h3>ErreQuadro</h3>
+          <span class="project-meta">B2B SaaS · Data-heavy platform</span>
+          <p>
+            UX design for a complex enterprise product focused on data tables,
+            design system and cognitive support for expert users.
+          </p>
+          <a href="errequadro.html">View case study →</a>
         </div>
-      </div>
+      </article>
+
+      <article class="project-card">
+        <img src="prorun.jpg" alt="ProRun AI Running App" />
+        <div class="project-content">
+          <h3>ProRun</h3>
+          <span class="project-meta">Mobile app · AI-powered</span>
+          <p>
+            AI-assisted running app focused on onboarding, motivation and monetization,
+            balancing user trust and business goals.
+          </p>
+          <a href="prorun.html">View case study →</a>
+        </div>
+      </article>
+
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Lorenzo Cavalieri. All rights reserved.</p>
+    <p>© 2026 Lorenzo Cavalieri</p>
   </footer>
 
-  <!-- JAVASCRIPT -->
- <script>
-  // MENU MOBILE
-  const toggleBtn = document.getElementById("menu-toggle");
-  const mobileMenu = document.getElementById("mobile-menu");
-
-  toggleBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("open");
-    toggleBtn.innerHTML = mobileMenu.classList.contains("open") ? "&times;" : "&#9776;";
-  });
-
-  document.querySelectorAll(".mobile-nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.remove("open");
-      toggleBtn.innerHTML = "&#9776;";
-    });
-  });
-
-  // CAROUSEL AUTO SCROLL - SOLO SU MOBILE
-  const carousel = document.getElementById("brand-carousel");
-
-  function isMobile() {
-    return window.innerWidth <= 768;
-  }
-
-  function duplicateLogos() {
-    if (!carousel.classList.contains("duplicated")) {
-      const logos = carousel.innerHTML;
-      carousel.innerHTML += logos;
-      carousel.classList.add("duplicated");
-    }
-  }
-
-  function startAutoScroll() {
-    if (!isMobile()) return;
-    duplicateLogos();
-    carousel.classList.add("auto-scroll");
-  }
-
-  function stopAutoScroll() {
-    carousel.classList.remove("auto-scroll");
-  }
-
-  // Avvio all'onload
-  window.addEventListener("load", () => {
-    startAutoScroll();
-  });
-
-  // Gestione resize
-  window.addEventListener("resize", () => {
-    stopAutoScroll();
-    if (isMobile()) startAutoScroll();
-  });
-
-  // Interruzione se l’utente tocca
-  carousel.addEventListener("pointerdown", () => stopAutoScroll());
-  carousel.addEventListener("pointerup", () => startAutoScroll());
-</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
