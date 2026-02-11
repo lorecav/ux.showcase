@@ -34,28 +34,76 @@ body {
 
 /* HEADER */
 .site-header {
+  position: relative;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 24px 40px;
 }
 
-.site-header nav a {
+.logo img {
+  height: 40px;
+}
+
+.desktop-nav a {
   margin-left: 24px;
   text-decoration: none;
   color: #ccc;
   font-weight: 500;
 }
 
-.site-header nav a.active,
-.site-header nav a:hover {
+.desktop-nav a.active,
+.desktop-nav a:hover {
   color: #00bfff;
 }
 
-.logo {
-  font-weight: 700;
-  text-decoration: none;
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
   color: #fff;
+  cursor: pointer;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.mobile-nav a {
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a.active {
+  color: #00bfff;
 }
 
 /* HERO */
@@ -97,12 +145,12 @@ body {
 
 /* PROJECTS */
 .projects {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px 120px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 32px;
-  padding: 0 40px 120px;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
 .project-card {
@@ -132,10 +180,10 @@ body {
 }
 
 .project-meta {
-  display: block;
   font-size: 0.85rem;
   color: #00bfff;
   margin-bottom: 12px;
+  display: block;
 }
 
 .project-content p {
@@ -151,6 +199,40 @@ body {
   font-weight: 600;
 }
 
+/* BRANDS */
+.brands {
+  padding: 80px 24px 100px;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.brands h2 {
+  font-size: 1.4rem;
+  margin-bottom: 32px;
+  color: #ccc;
+  font-weight: 500;
+}
+
+.brands-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+}
+
+.brands-row img {
+  height: 36px;
+  opacity: 0.75;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.3s ease;
+}
+
+.brands-row img:hover {
+  opacity: 1;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
@@ -161,6 +243,14 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
   .hero {
     margin-top: 80px;
   }
