@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="ux-logo-designer-favicon.png" type="image/png" />
+  <title>ErreQuadro – UX Case Study</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- BACKGROUND -->
+  <div class="background-wrapper">
+    <img src="glassbg.jpg" alt="background" class="bg-img" />
+  </div>
+  <div class="background-overlay"></div>
+
+  <!-- HEADER (identico alla home) -->
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="ux-logo-designer.png" alt="Logo" class="site-logo" />
+        </a>
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="contact.html">Contact me</a></li>
+      </ul>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="contact.html">Contact me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="section-wrapper case-study">
+
+    <!-- INTRO -->
+    <section class="case-section">
+      <h1>ErreQuadro</h1>
+      <p>
+        B2B SaaS platform designed to aggregate and analyze large volumes of complex data.
+        The project focused on usability, clarity and scalability in a data-heavy environment.
+      </p>
+
+      <p class="case-meta">
+        <strong>Role:</strong> UX Designer<br/>
+        <strong>Context:</strong> B2B · SaaS · Data-heavy product<br/>
+        <strong>Activities:</strong> UX design · UI design · Design system · Client collaboration
+      </p>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="case-section">
+      <h2>The problem</h2>
+      <p>
+        ErreQuadro is used daily by expert users to analyze structured and aggregated datasets.
+        The main UX challenge was making highly complex tables readable, comparable and operable,
+        without increasing cognitive load or oversimplifying the data.
+      </p>
+    </section>
+
+    <!-- CONTRIBUTION -->
+    <section class="case-section">
+      <h2>My contribution</h2>
+      <ul>
+        <li>Designed the UX of a data-heavy B2B product</li>
+        <li>Created a dedicated design system focused on tables and system states</li>
+        <li>Defined consistent interaction patterns and feedback mechanisms</li>
+        <li>Worked directly with the client to translate domain complexity into UX solutions</li>
+        <li>Collaborated closely with developers during implementation</li>
+      </ul>
+    </section>
+
+    <!-- SCREENS 1 -->
+    <section class="case-section case-screens">
+      <h2>Discovery tables</h2>
+      <p>
+        High-density tables designed to support comparison, scanning and fast decision-making.
+      </p>
+
+      <!-- SCREENSHOT PLACEHOLDER -->
+      <div class="screen-placeholder">
+        <!-- INSERT TABLE SCREENSHOT HERE -->
+      </div>
+    </section>
+
+    <!-- SCREENS 2 -->
+    <section class="case-section case-screens">
+      <h2>Document details & glossary</h2>
+      <p>
+        Contextual glossary and overlays used as cognitive support without breaking the workflow.
+      </p>
+
+      <div class="screen-placeholder">
+        <!-- INSERT DOCUMENT DETAILS / GLOSSARY SCREENSHOT HERE -->
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="case-section">
+      <h2>Results & learnings</h2>
+      <ul>
+        <li>Improved readability and operability of complex datasets</li>
+        <li>Estimated reduction of errors in critical upload flows</li>
+        <li>Increased user autonomy and reduced need for external documentation</li>
+      </ul>
+
+      <p>
+        This project reinforced how clarity, consistency and cognitive support
+        are more important than visual polish in complex B2B environments.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Lorenzo Cavalieri. All rights reserved.</p>
+  </footer>
+
+  <!-- JS (identico alla home) -->
+  <script>
+    const toggleBtn = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    toggleBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("open");
+      toggleBtn.innerHTML = mobileMenu.classList.contains("open") ? "&times;" : "&#9776;";
+    });
+
+    document.querySelectorAll(".mobile-nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+        toggleBtn.innerHTML = "&#9776;";
+      });
+    });
+  </script>
+
+</body>
+</html>
