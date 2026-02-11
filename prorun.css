@@ -37,9 +37,20 @@
    Text alignment for mobile product
    ------------------------------------- */
 
-.case-screens {
-  text-align: center;
+.case-screens h2,
+.case-screens h3,
+.case-screens p {
+  text-align: left;
 }
+
+/* Center images only */
+.screens-row {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
 
 .case-screens p,
 .case-screens ul {
@@ -81,5 +92,6 @@
     align-items: center;
   }
 }
+
 
 
