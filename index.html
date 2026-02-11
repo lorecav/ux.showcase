@@ -15,15 +15,33 @@
   </div>
   <div class="background-overlay"></div>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <a href="index.html" class="logo">LC</a>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<header class="site-header">
+  <div class="header-left">
+    <a href="index.html" class="logo">
+      <img src="ux-logo-designer.png" alt="Lorenzo Cavalieri logo" />
+    </a>
+  </div>
+
+  <nav class="desktop-nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+    &#9776;
+  </button>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <nav class="mobile-nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</div>
+
 
   <!-- HERO -->
   <main>
@@ -83,3 +101,4 @@
 
 </body>
 </html>
+
