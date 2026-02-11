@@ -347,7 +347,7 @@ footer {
 
 /* Sezioni */
 .case-section {
-  margin-bottom: 72px;
+  margin-bottom: 96px;
 }
 
 .case-section h1 {
@@ -391,6 +391,9 @@ footer {
 /* Sezioni con screenshot */
 .case-screens {
   margin-bottom: 96px;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Placeholder per screenshot */
@@ -430,6 +433,7 @@ footer {
     height: 240px;
   }
 }
+
 
 
 
