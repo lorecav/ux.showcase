@@ -1,44 +1,89 @@
 /* =====================================================
-   PRO-RUN – CASE STUDY (STABLE VERSION)
+   PRO-RUN – CASE STUDY CSS (FINAL, CLEAN)
    ===================================================== */
 
-/* Wrapper */
+/* =========================
+   WRAPPER
+   ========================= */
+
 .case-study {
   max-width: 960px;
   margin: 0 auto;
   padding: 120px 24px 160px;
 }
 
-/* Sections */
+/* =========================
+   SECTIONS
+   ========================= */
+
 .case-section {
-  margin-bottom: 80px;
+  margin-bottom: 88px;
 }
 
-/* Headings */
-.case-section h3 {
+.case-section h1 {
+  margin-bottom: 16px;
+}
+
+.case-section h2 {
   margin-bottom: 24px;
 }
 
-/* -----------------------------
-   Screens layout
-   ----------------------------- */
+.case-section h3 {
+  margin-bottom: 20px;
+}
 
+/* =========================
+   TEXT BLOCKS
+   ========================= */
+
+.case-section p,
+.case-section ul {
+  max-width: 720px;
+  line-height: 1.7;
+}
+
+.case-section ul {
+  margin-top: 16px;
+  padding-left: 20px;
+}
+
+.case-section ul li {
+  margin-bottom: 12px;
+  color: #cccccc;
+}
+
+/* =========================
+   SCREENS – MAIN LAYOUT
+   ========================= */
+
+/* Constrain the whole screens section */
+.case-screens {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Row of phone screens */
 .screens-row {
   display: flex;
   justify-content: center;
-  gap: 32px;
-  margin: 32px 0 24px;
+  gap: 24px;
+  margin: 32px 0 28px;
 }
 
 /* Phone screenshots */
 .screens-row img {
   width: 100%;
-  max-width: 320px;     /* desktop size */
+  max-width: 260px;      /* 👈 controlled desktop size */
   height: auto;
-  border-radius: 20px;
+  border-radius: 18px;
+  display: block;
 }
 
-/* UX notes */
+/* =========================
+   UX NOTES
+   ========================= */
+
 .ux-notes {
   max-width: 720px;
   margin: 0 auto;
@@ -51,17 +96,26 @@
   color: #cccccc;
 }
 
-/* -----------------------------
-   Mobile adjustments
-   ----------------------------- */
+/* =========================
+   MOBILE
+   ========================= */
 
 @media (max-width: 768px) {
+  .case-study {
+    padding: 100px 20px 120px;
+  }
+
   .screens-row {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 
   .screens-row img {
     max-width: 100%;
+  }
+
+  .case-section {
+    margin-bottom: 72px;
   }
 }
