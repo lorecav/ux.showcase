@@ -143,3 +143,37 @@
     min-height: 240px;
   }
 }
+
+/* =========================================
+   ERREQUADRO – HARD RESET FOR IMAGES
+   This fixes absolute positioning issues
+   ========================================= */
+
+.case-study img {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+
+  margin: 40px 0 !important;
+  z-index: 1 !important;
+}
+
+/* Ensure sections expand with content */
+.case-section,
+.case-screens {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+/* Safety net: prevent stacking */
+.case-study {
+  isolation: isolate;
+}
+
+
