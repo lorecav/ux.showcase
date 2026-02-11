@@ -217,6 +217,33 @@ header {
   background-color: #009acd;
 }
 
+/* ===========================
+   PROJECT CARDS – FIX LAYOUT
+   =========================== */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cta-button {
+  margin-top: auto;
+}
+
 /* BRANDS SECTION */
 .brands {
   padding: 60px 0;
@@ -403,4 +430,5 @@ footer {
     height: 240px;
   }
 }
+
 
