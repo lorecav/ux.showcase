@@ -1,6 +1,5 @@
 /* =====================================================
-   PRORUN – CASE STUDY CSS
-   Mobile-first, controlled screenshots
+   PRO-RUN – CASE STUDY (STABLE VERSION)
    ===================================================== */
 
 /* Wrapper */
@@ -12,86 +11,57 @@
 
 /* Sections */
 .case-section {
-  margin-bottom: 72px;
+  margin-bottom: 80px;
 }
 
-/* -------------------------------------
-   Screenshots (ProRun specific)
-   ------------------------------------- */
+/* Headings */
+.case-section h3 {
+  margin-bottom: 24px;
+}
 
-.case-screens img {
-  display: block;
+/* -----------------------------
+   Screens layout
+   ----------------------------- */
+
+.screens-row {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 32px 0 24px;
+}
+
+/* Phone screenshots */
+.screens-row img {
   width: 100%;
-  max-width: 360px;   /* 👈 key value */
+  max-width: 320px;     /* desktop size */
   height: auto;
-  margin: 32px auto 24px;
   border-radius: 20px;
 }
 
-/* Optional: group of screens */
-.case-screens.multi img {
-  max-width: 300px;
+/* UX notes */
+.ux-notes {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-left: 20px;
 }
 
-/* -------------------------------------
-   Text alignment for mobile product
-   ------------------------------------- */
-
-.case-screens h2,
-.case-screens h3,
-.case-screens p {
-  text-align: left;
+.ux-notes li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: #cccccc;
 }
 
-/* Center images only */
-.screens-row {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  flex-wrap: wrap;
-}
+/* -----------------------------
+   Mobile adjustments
+   ----------------------------- */
 
-
-.case-screens p,
-.case-screens ul {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* -------------------------------------
-   Responsive adjustments
-   ------------------------------------- */
-
-@media (max-width: 768px) {
-  .case-screens img {
-    max-width: 100%;
-    margin: 24px auto;
-  }
-}
-
-/* ======================================
-   PRO-RUN – MULTI SCREEN ROW (DESKTOP)
-   ====================================== */
-
-.screens-row {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  flex-wrap: wrap; /* safety */
-}
-
-/* Images inside row */
-.screens-row img {
-  margin: 32px 0;
-}
-
-/* Mobile: stack again */
 @media (max-width: 768px) {
   .screens-row {
     flex-direction: column;
     align-items: center;
   }
+
+  .screens-row img {
+    max-width: 100%;
+  }
 }
-
-
-
