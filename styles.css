@@ -539,12 +539,14 @@ footer {
 }
 
 /* =====================================
-   PRO-RUN – SMALL SCREENS (DESKTOP)
+   PRO-RUN – FORCE SMALL IMAGES
    ===================================== */
 
-.side-layout .screens-row img {
+.side-layout.case-screens img {
   max-width: 260px;
 }
+
+
 
 
 
