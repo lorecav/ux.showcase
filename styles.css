@@ -409,6 +409,7 @@ footer {
 .back-link {
   display: inline-block;
   margin-bottom: 40px;
+  margin-top: 40px;
   font-size: 0.9rem;
   color: #bbbbbb;
   text-decoration: none;
@@ -551,6 +552,7 @@ body.erre .case-screens img {
 .side-layout.case-screens img {
   max-width: 260px;
 }
+
 
 
 
