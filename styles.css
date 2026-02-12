@@ -391,6 +391,23 @@ footer {
   line-height: 1.7;
 }
 
+/* Back link to portfolio */
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 40px;
+  font-size: 0.9rem;
+  color: #bbbbbb;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.back-link:hover {
+  opacity: 0.6;
+  transform: translateX(-3px);
+}
+
 /* ===========================
    SCREEN SECTION
    =========================== */
@@ -460,4 +477,5 @@ footer {
     height: 240px;
   }
 }
+
 
