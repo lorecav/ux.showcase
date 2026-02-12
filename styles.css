@@ -372,7 +372,7 @@ footer {
 
 /* Testo */
 .case-section p {
-  color: #cccccc;
+  color: #e6e6e6;
   line-height: 1.75;
   max-width: 820px;
   margin-left: auto;
@@ -400,7 +400,7 @@ footer {
 
 .case-section ul li {
   margin-bottom: 14px;
-  color: #cccccc;
+  color: #e6e6e6;
   line-height: 1.7;
 }
 
@@ -551,6 +551,7 @@ body.erre .case-screens img {
 .side-layout.case-screens img {
   max-width: 260px;
 }
+
 
 
 
