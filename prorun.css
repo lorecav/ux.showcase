@@ -137,6 +137,7 @@
     grid-template-columns: 320px 1fr;
     column-gap: 60px;
     align-items: start;
+     margin-top: 12px;
   }
 
   .side-wrapper .screens-row {
@@ -151,4 +152,9 @@
     margin-top: 18px;   /* 👈 abbassamento ottico */
     padding-left: 0;
   }
+
+   .side-layout h3 {
+    margin-bottom: 36px;
+  }
 }
+
