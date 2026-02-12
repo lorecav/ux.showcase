@@ -63,18 +63,19 @@
   margin-right: auto;
 }
 
-/* Row of phone screens */
+/* Screens layout – always left aligned */
 .screens-row {
   display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin: 32px 0 28px;
+  justify-content: flex-start;   /* 👈 sempre a sinistra */
+  align-items: flex-start;
+  gap: 32px;
+  margin: 40px 0 32px;
+  flex-wrap: wrap;
 }
 
-/* Phone screenshots */
 .screens-row img {
   width: 100%;
-  max-width: 260px;      /* 👈 controlled desktop size */
+  max-width: 280px;   /* dimensione desktop equilibrata */
   height: auto;
   border-radius: 18px;
   display: block;
@@ -107,7 +108,7 @@
 
   .screens-row {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
   }
 
@@ -119,3 +120,4 @@
     margin-bottom: 72px;
   }
 }
+
