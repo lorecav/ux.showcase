@@ -340,7 +340,7 @@ footer {
    =========================== */
 
 .case-study {
-  max-width: 960px;        /* stessa logica della pagina About */
+  max-width: 1000px;        /* stessa logica della pagina About */
   margin: 0 auto;
   padding: 120px 24px 160px;
 }
@@ -496,6 +496,7 @@ footer {
     height: 240px;
   }
 }
+
 
 
 
