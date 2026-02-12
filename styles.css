@@ -160,7 +160,7 @@ header {
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
-  padding: 0 40px 60px;
+  padding: 0 80px 80px;
 }
 
 .project-card {
@@ -169,7 +169,7 @@ header {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   transition: transform 0.3s ease;
-  max-width: 300px;
+  max-width: 360px;
   backdrop-filter: blur(10px);
   flex: 1 1 300px;
 }
@@ -440,6 +440,7 @@ footer {
     height: 240px;
   }
 }
+
 
 
 
