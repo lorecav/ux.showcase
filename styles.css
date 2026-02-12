@@ -436,6 +436,17 @@ footer {
   border-radius: 14px;
 }
 
+/* ErreQuadro full-width screens */
+.case-screens img {
+  display: block;
+  width: 100%;
+  max-width: 820px;   /* stessa larghezza del testo */
+  height: auto;
+  margin: 40px auto 24px;
+  border-radius: 14px;
+}
+
+
 /* Placeholder */
 .screen-placeholder {
   margin-top: 32px;
@@ -479,6 +490,7 @@ footer {
     height: 240px;
   }
 }
+
 
 
 
