@@ -538,6 +538,14 @@ footer {
   }
 }
 
+/* =====================================
+   PRO-RUN – SMALL SCREENS (DESKTOP)
+   ===================================== */
+
+.side-layout .screens-row img {
+  max-width: 260px;
+}
+
 
 
 
