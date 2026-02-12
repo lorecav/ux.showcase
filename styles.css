@@ -339,10 +339,11 @@ footer {
    CASE STUDY PAGES – UPDATED
    =========================== */
 
-.case-study {
-  max-width: 1500px;              /* più spazio orizzontale */
+main.case-study {
+  width: 100%;
+  max-width: 1600px;      /* più ampio */
   margin: 0 auto;
-  padding: 120px 120px 160px;     /* più respiro laterale */
+  padding: 120px 140px 160px;
 }
 
 /* Sezioni */
@@ -416,11 +417,11 @@ footer {
 /* Screenshot dimensione desktop */
 .screens-row img {
   width: 100%;
-  max-width: 300px;      /* più piccoli e proporzionati */
+  max-width: 260px;   /* più eleganti */
   height: auto;
   border-radius: 16px;
-  display: block;
 }
+
 
 /* Caso ErreQuadro (screenshot grandi desktop) */
 .case-screens img.full-width {
@@ -482,6 +483,10 @@ footer {
   .screen-placeholder {
     height: 260px;
   }
+}
+
+main {
+  width: 100%;
 }
 
 
