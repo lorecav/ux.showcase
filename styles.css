@@ -553,6 +553,21 @@ body.erre .case-screens img {
   max-width: 260px;
 }
 
+/* =====================================
+   PRO-RUN – UNIFIED IMAGE SIZE
+   ===================================== */
+
+body.prorun .case-screens img {
+  max-width: 260px;
+}
+
+body.prorun .screens-row {
+  gap: 24px;
+}
+
+
+
+
 
 
 
