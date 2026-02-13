@@ -453,7 +453,7 @@ footer {
   display: block;
   width: 100%;
   height: auto;
-  margin: 40px 0 24px;
+  margin: 10px 0 24px;
   border-radius: 14px;
 }
 
@@ -522,7 +522,6 @@ body.erre .case-screens img {
   .side-wrapper {
     display: grid;
     grid-template-columns: 320px 1fr;
-    column-gap: 60px;
     align-items: start;
     margin-top: 12px;
   }
@@ -560,6 +559,7 @@ body.erre .case-screens img {
 body.prorun .case-screens img {
   max-width: 260px;
 }
+
 
 
 
