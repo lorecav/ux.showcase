@@ -488,7 +488,7 @@ body.erre .case-screens img {
 @media (max-width: 768px) {
 
   .case-study {
-    padding: 100px 20px 120px;
+    padding: 0px 20px 120px;
   }
 
   .case-section {
@@ -560,6 +560,7 @@ body.erre .case-screens img {
 body.prorun .case-screens img {
   max-width: 260px;
 }
+
 
 
 
