@@ -3,97 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="ux-logo-designer-favicon.png" type="image/png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Contact – Lorenzo Cavalieri</title>
-  <link rel="stylesheet" href="styles-contact.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <div class="background-wrapper">
-    <img src="glassbg.jpg" alt="background" class="bg-img" />
-  </div>
-  <div class="background-overlay"></div>
 
-  <header>
-    <nav class="navbar">
-      <div class="logo-container">
-        <a href="index.html">
-          <img src="ux-logo-designer.png" alt="Logo" class="site-logo" />
-        </a>
+<body class="contact-page">
+
+<header>
+  <nav class="navbar">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="ux-logo-designer.png" alt="Logo" class="site-logo" />
+      </a>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About me</a></li>
+      <li><a href="contact.html" class="active">Contact me</a></li>
+    </ul>
+
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About me</a></li>
+      <li><a href="contact.html" class="active">Contact me</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="contact-container">
+
+  <section class="contact-hero">
+    <h1>Let’s work together</h1>
+    <p>
+      Interested in collaborating, discussing a product challenge,
+      or exploring new opportunities?
+      I’d love to hear from you.
+    </p>
+  </section>
+
+  <section class="contact-card">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY" />
+
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required placeholder="Insert your name" />
       </div>
 
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About me</a></li>
-        <li><a href="contact.html" class="active">Contact me</a></li>
-      </ul>
-    </nav>
-
-    <div class="mobile-menu" id="mobile-menu">
-      <ul class="mobile-nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About me</a></li>
-        <li><a href="contact.html" class="active">Contact me</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <main class="section-wrapper">
-    <div class="contact-form-wrapper">
-      <h3>Let’s get in touch</h3>
-      <p class="contact-intro">Interested in working together or want feedback on your project? Fill the form below!</p>
-      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-        <input type="hidden" name="access_key" value="1b0aeff3-3821-4f5e-9061-2f6a2ac65806" />
-
-        <label for="nome">Name and Surname *</label>
-        <input type="text" id="nome" name="nome" required placeholder="Jean Rosseau" />
-
+      <div class="form-group">
         <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required placeholder="j.rosseau@mail.com" />
+        <input type="email" id="email" name="email" required placeholder="Type your email" />
+      </div>
 
-        <label for="telefono">Phone number *</label>
-        <input type="tel" id="telefono" name="telefono" required placeholder="+39 3882981002" />
+      <div class="form-group">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" placeholder="Company name" />
+      </div>
 
-        <label for="azienda">Company *</label>
-        <input type="text" id="azienda" name="azienda" required placeholder="Capsule Corporation" />
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+      </div>
 
-        <label for="messaggio">Message (optional)</label>
-        <textarea id="messaggio" name="messaggio" rows="4" placeholder="Dear Lorenzo, I would like to express my interest in..."></textarea>
+      <button type="submit" class="cta-button">Send message</button>
 
-        <button type="submit" class="cta-button">Send</button>
-      </form>
-    </div>
-  </main>
+    </form>
+  </section>
 
-  <footer>
-    <a href="http://linkedin.com/in/lorenzo-cavalieri259/" target="_blank">
-      <img src="linkedin.png" alt="LinkedIn profile" />
-    </a>
-    <a href="https://www.behance.net/lorenzocavalieri" target="_blank">
-      <img src="behance.png" alt="Behance profile" />
-    </a>
-    <a href="https://github.com/lorecav" target="_blank">
-      <img src="github.png" alt="GitHub profile" />
-    </a>
-    <p>&copy; 2025 Lorenzo Cavalieri. Tutti i diritti riservati.</p>
-  </footer>
+</main>
 
-  <script>
-    const toggleBtn = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
+<footer>
+  <p>&copy; 2026 Lorenzo Cavalieri. All rights reserved.</p>
+</footer>
 
-    toggleBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("open");
-      toggleBtn.innerHTML = mobileMenu.classList.contains("open") ? "&times;" : "&#9776;";
-    });
+<script>
+  const toggleBtn = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
 
-    document.querySelectorAll(".mobile-nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.remove("open");
-        toggleBtn.innerHTML = "&#9776;";
-      });
-    });
-  </script>
+  toggleBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+    toggleBtn.innerHTML = mobileMenu.classList.contains("open") ? "&times;" : "&#9776;";
+  });
+</script>
+
 </body>
 </html>
