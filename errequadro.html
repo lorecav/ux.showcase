@@ -3,190 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="ux-logo-designer-favicon.png" type="image/png" />
-  <title>ErreQuadro – UX Case Study</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>ErreQuadro – Case Study</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="erre">
 
-  <!-- BACKGROUND -->
-  <div class="background-wrapper">
-    <img src="glassbg.jpg" alt="background" class="bg-img" />
-  </div>
-  <div class="background-overlay"></div>
+<body class="case-page">
 
-  <!-- HEADER -->
-  <header>
-    <nav class="navbar">
-      <div class="logo-container">
-        <a href="index.html">
-          <img src="ux-logo-designer.png" alt="Logo" class="site-logo" />
-        </a>
-      </div>
-
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About me</a></li>
-        <li><a href="contact.html">Contact me</a></li>
-      </ul>
-    </nav>
-
-    <div class="mobile-menu" id="mobile-menu">
-      <ul class="mobile-nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About me</a></li>
-        <li><a href="contact.html">Contact me</a></li>
-      </ul>
+<header>
+  <nav class="navbar">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="ux-logo-designer.png" alt="Logo" class="site-logo" />
+      </a>
     </div>
-  </header>
 
-  <!-- MAIN -->
-  <main class="case-study">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About me</a></li>
+      <li><a href="contact.html">Contact me</a></li>
+    </ul>
 
-    <!-- INTRO -->
-    <section class="case-section">
-      <a href="index.html" class="back-link">← Back to selected work</a>
-      <h1>ErreQuadro</h1>
-      <p>
-        B2B SaaS platform designed to aggregate and analyze large volumes of complex data.
-        The project focused on clarity, scalability and usability in a data-heavy environment.
-      </p>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  </nav>
 
-      <p class="case-meta">
-        <strong>Role:</strong> UX Designer<br/>
-        <strong>Context:</strong> B2B · SaaS · Data-heavy product<br/>
-        <strong>Scope:</strong> UX design · UI design · Design system · Client collaboration
-      </p>
-    </section>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About me</a></li>
+      <li><a href="contact.html">Contact me</a></li>
+    </ul>
+  </div>
+</header>
 
-    <!-- PROBLEM -->
-    <section class="case-section">
-      <h2>The problem</h2>
-      <p>
-        ErreQuadro is used daily by expert users to analyze structured and aggregated datasets.
-        The main UX challenge was making highly complex tables readable, comparable and operable,
-        without increasing cognitive load or oversimplifying the data.
-      </p>
-    </section>
+<main class="case-container">
 
-    <!-- ROLE -->
-    <section class="case-section">
-      <h2>My role & responsibilities</h2>
-      <p>
-        I worked as the main UX Designer on the project, collaborating directly with the client,
-        developers and stakeholders to translate domain complexity into effective UX solutions.
-      </p>
-    </section>
+  <a href="index.html" class="back-link">← Back to selected work</a>
 
-    <!-- APPROACH -->
-    <section class="case-section">
-      <h2>Design approach</h2>
-      <p>
-        Given the complexity of the domain, the experience was designed prioritizing clarity,
-        efficiency and consistency over visual novelty or minimalism.
-      </p>
-    </section>
+  <!-- HERO -->
+  <section class="case-hero">
+    <h1>ErreQuadro</h1>
+    <p class="case-subtitle">
+      Designing clarity in a complex B2B data environment.
+    </p>
 
-    <!-- DECISION 1 -->
-    <section class="case-section case-screens">
-      <h2>High-density data tables</h2>
-      <p>
-        Tables were intentionally designed with high information density to support comparison,
-        scanning and fast decision-making for expert users.
-      </p>
-     <div class="screens-row">
-      <img src="discovery-ingestion-loading.jpg" alt="Discovery Table" />
-     </div>
-    </section>
+    <div class="case-meta">
+      <div><strong>Role</strong><br/>UX Designer</div>
+      <div><strong>Context</strong><br/>B2B · SaaS · Data-heavy product</div>
+      <div><strong>Scope</strong><br/>UX · UI · Design system · Stakeholder collaboration</div>
+    </div>
+  </section>
 
-    <!-- DECISION 2 -->
-    <section class="case-section case-screens">
-      <h2>Design system for complex products</h2>
-      <p>
-        A dedicated design system was created to ensure consistency, scalability and predictable
-        interaction patterns across the product.
-      </p>
-      <div class="screens-row">
-      <img src="tab-designsystem.jpg" alt="Design System example" />
-      </div>
-    </section>
+  <!-- PROBLEM -->
+  <section class="case-section">
+    <h2>The challenge</h2>
+    <p>
+      ErreQuadro is a platform used by expert users to analyze structured datasets daily.
+      The core challenge was supporting high information density without overwhelming users
+      or reducing analytical power.
+    </p>
+  </section>
 
-    <!-- DECISION 3 -->
-    <section class="case-section case-screens">
-      <h2>Contextual glossary</h2>
-      <p>
-        A contextual glossary was designed to support understanding of complex terminology
-        without forcing users to leave their workflow.
-      </p>
-      <div class="screens-row">
-      <img src="doc-detail-glossary.jpg" alt="Discovery Glossary" />
-      </div>
-    </section>
+  <!-- APPROACH -->
+  <section class="case-section">
+    <h2>Approach</h2>
+    <p>
+      Instead of simplifying the product, the design focused on clarity,
+      predictable interaction patterns and cognitive support.
+      Efficiency was prioritized over visual minimalism.
+    </p>
+  </section>
 
-    <!-- DECISION 4 -->
-    <section class="case-section case-screens">
-      <h2>System feedback & error handling</h2>
-      <p>
-        Critical flows such as upload and processing were enhanced with clear system feedback,
-        early error detection and actionable messages.
-      </p>
-      <div class="screens-row">
-      <img src="error-create-newproject.jpg" alt="Error state" />
-      </div>
-    </section>
+  <!-- DECISION 1 -->
+  <section class="case-section case-image">
+    <h2>High-density data tables</h2>
+    <p>
+      Tables were intentionally dense to support comparison and expert scanning.
+      Hierarchy, alignment and interaction cues were carefully calibrated.
+    </p>
+    <img src="discovery-ingestion-loading.jpg" alt="Data table interface" />
+  </section>
 
-    <!-- RESULTS -->
-    <section class="case-section">
-      <h2>Results & learnings</h2>
-      <ul>
-        <li>Improved readability and operability of complex datasets</li>
-        <li>Estimated reduction of errors in critical flows</li>
-        <li>Increased user autonomy and confidence</li>
-      </ul>
+  <!-- DECISION 2 -->
+  <section class="case-section case-image">
+    <h2>Design system for scalability</h2>
+    <p>
+      A structured design system ensured consistency across complex modules
+      and reduced friction in product evolution.
+    </p>
+    <img src="tab-designsystem.jpg" alt="Design system example" />
+  </section>
 
-      <p>
-        This project reinforced how clarity, consistency and cognitive support
-        are fundamental in complex B2B environments.
-      </p>
-      <a href="index.html" class="back-link">← Back to selected work</a>
-    </section>
+  <!-- DECISION 3 -->
+  <section class="case-section case-image">
+    <h2>Contextual glossary</h2>
+    <p>
+      A contextual glossary allowed users to access terminology definitions
+      without breaking workflow continuity.
+    </p>
+    <img src="doc-detail-glossary.jpg" alt="Glossary feature" />
+  </section>
 
-  </main>
+  <!-- DECISION 4 -->
+  <section class="case-section case-image">
+    <h2>System feedback & error handling</h2>
+    <p>
+      Critical flows were redesigned with proactive feedback,
+      actionable error messaging and clearer system states.
+    </p>
+    <img src="error-create-newproject.jpg" alt="Error handling interface" />
+  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2026 Lorenzo Cavalieri. All rights reserved.</p>
-  </footer>
+  <!-- RESULTS -->
+  <section class="case-section">
+    <h2>Impact</h2>
+    <ul>
+      <li>Improved readability of complex datasets</li>
+      <li>Reduced friction in high-stakes workflows</li>
+      <li>Increased user autonomy and confidence</li>
+    </ul>
+  </section>
 
-  <!-- JS -->
-  <script>
-    const toggleBtn = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
+  <a href="index.html" class="back-link">← Back to selected work</a>
 
-    toggleBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("open");
-      toggleBtn.innerHTML = mobileMenu.classList.contains("open") ? "&times;" : "&#9776;";
-    });
+</main>
 
-    document.querySelectorAll(".mobile-nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.remove("open");
-        toggleBtn.innerHTML = "&#9776;";
-      });
-    });
-  </script>
+<footer>
+  <p>&copy; 2026 Lorenzo Cavalieri. All rights reserved.</p>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  toggleBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+    toggleBtn.innerHTML = mobileMenu.classList.contains("open") ? "&times;" : "&#9776;";
+  });
+</script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
