@@ -1,4 +1,11 @@
 /* RESET */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -559,6 +566,7 @@ body.erre .case-screens img {
 body.prorun .case-screens img {
   max-width: 260px;
 }
+
 
 
 
