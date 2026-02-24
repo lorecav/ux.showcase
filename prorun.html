@@ -3,313 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="ux-logo-designer-favicon.png" type="image/png" />
-  <title>ProRun – UX Case Study</title>
-
-  <!-- Global styles -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>ProRun – Case Study</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- Optional dedicated styles -->
-  <!-- <link rel="stylesheet" href="prorun.css" /> -->
 </head>
 
-<body class="prorun">
+<body class="case-page">
 
-  <!-- BACKGROUND -->
-  <div class="background-wrapper">
-    <img src="glassbg.jpg" alt="background" class="bg-img" />
-  </div>
-  <div class="background-overlay"></div>
-
-  <!-- HEADER -->
-  <header>
-    <nav class="navbar">
-      <div class="logo-container">
-        <a href="index.html">
-          <img src="ux-logo-designer.png" alt="Logo" class="site-logo" />
-        </a>
-      </div>
-
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About me</a></li>
-        <li><a href="contact.html">Contact me</a></li>
-      </ul>
-    </nav>
-
-    <div class="mobile-menu" id="mobile-menu">
-      <ul class="mobile-nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About me</a></li>
-        <li><a href="contact.html">Contact me</a></li>
-      </ul>
+<header>
+  <nav class="navbar">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="ux-logo-designer.png" alt="Logo" class="site-logo" />
+      </a>
     </div>
-  </header>
 
-  <!-- MAIN -->
-  <main class="case-study">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About me</a></li>
+      <li><a href="contact.html">Contact me</a></li>
+    </ul>
 
-    <!-- INTRO -->
-    <section class="case-section">
-      <a href="index.html" class="back-link">← Back to selected work</a>
-      
-      <h1>ProRun</h1>
-      <p>
-        Mobile running app with an AI assistant to support users in achieving personal fitness goals.
-      </p>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  </nav>
 
-      <p class="case-meta">
-        <strong>Role:</strong> Product Designer<br/>
-        <strong>Context:</strong> Mobile app · B2C · AI-powered product<br/>
-        <strong>Scope:</strong> UX design · UI design · onboarding · monetization · marketing assets
-      </p>
-    </section>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About me</a></li>
+      <li><a href="contact.html">Contact me</a></li>
+    </ul>
+  </div>
+</header>
 
-    <!-- PROBLEM -->
-    <section class="case-section">
-      <h2>The problem</h2>
-      <p>
-        Many running apps provide metrics and generic training plans, but struggle to
-        <strong>truly guide users toward achieving a personal goal</strong>,
-        while maintaining motivation and continuity over time.
-      </p>
+<main class="case-container">
 
-      <p>
-        The challenge for ProRun was to design an experience that could:
-      </p>
+  <a href="index.html" class="back-link">← Back to selected work</a>
 
-      <ul>
-        <li>Guide users step by step throughout their training journey.</li>
-        <li>Make the value of AI understandable and trustworthy.</li>
-        <li>Balance <strong>motivation, usefulness and monetization.</strong> without compromising user trust.</li>
-      </ul>
-    </section>
+  <!-- HERO -->
+  <section class="case-hero">
+    <h1>ProRun</h1>
+    <p class="case-subtitle">
+      Designing an AI-powered running experience that balances motivation, trust and monetization.
+    </p>
 
-     <!-- TARGET -->
-    <section class="case-section">
-      <h2>Who it was for</h2>
-      <ul>
-        <li>Beginner and intermediate runners.</li>
-        <li>Isers training toward personal milestones.</li>
-        <li>People seeking guidance rather than raw data.</li>
-      </ul>
-    </section>
-    
-    <!-- CONTRIBUTION -->
-    <section class="case-section">
-      <h2>My contribution</h2>
-      <p>
-        In ProRun, I was responsible for:
-      </p>
+    <div class="case-meta">
+      <div><strong>Role</strong><br/>Product Designer</div>
+      <div><strong>Context</strong><br/>Mobile · B2C · AI-powered app</div>
+      <div><strong>Scope</strong><br/>UX · UI · Onboarding · Monetization · Product strategy</div>
+    </div>
+  </section>
 
-      <ul>
-        <li>Designing the end-to-end experience of the app</li>
-        <li>Defining onboarding flows and training plan setup</li>
-        <li>Designing the interaction with the AI assistant</li>
-        <li>Working on the <strong>paywall and CTAs</strong>, balancing UX and business goals</li>
-        <li>Ensuring consistency between the product and marketing assets for aligned communication</li>
-      </ul>
-    </section>
+  <!-- CHALLENGE -->
+  <section class="case-section">
+    <h2>The challenge</h2>
+    <p>
+      Most running apps provide metrics and generic plans,
+      but struggle to truly guide users toward a personal goal
+      while maintaining long-term motivation.
+    </p>
 
-      <!-- CHALLENGES -->
-    <section class="case-section">
-      <h2>Constraints and challenges</h2>
-      <ul>
-        <li>AI features required clear trust-building patterns.</li>
-        <li>Onboarding needed to remain short while collecting key data.</li>
-        <li>Monetization had to coexist with motivation.</li>
-        <li>Limited attention span during post-run interactions</li>
-      </ul>
-    </section>
+    <ul>
+      <li>Guide users step by step throughout their journey</li>
+      <li>Make AI understandable and trustworthy</li>
+      <li>Balance user value and business goals</li>
+    </ul>
+  </section>
 
-          <!-- APPROACH -->
-    <section class="case-section">
-      <h2>Design approach and iterations</h2>
-      <p>Early onboarding concepts introduced too much information upfront, causing user drop-off during testing. The flow was iterated to progressively reveal information based on user goals.</p>
-      <p>Similarly, early paywall explorations felt too transactional; messaging was reframed around progress and outcomes instead of features.</p>
-    </section>
+  <!-- ONBOARDING -->
+  <section class="case-section">
+    <h2>Onboarding & goal framing</h2>
+    <p>
+      Early iterations caused drop-off due to information overload.
+      The flow was redesigned using progressive disclosure.
+    </p>
 
-    <!-- SCREENS -->
-    <section class="case-section">
-      <h2>Screens & UX decisions</h2>
-    </section>
+    <div class="case-gallery two">
+      <img src="ob1.png" alt="Onboarding step 1">
+      <img src="ob2.png" alt="Onboarding step 2">
+    </div>
+  </section>
 
-    <!-- ACTIVITIES -->
-    <section class="case-section case-screens">
-      <h3>Activities: activity history and post-run feedback</h3>
-      
-       <div class="screens-row">
-        <img src="pr-activities.png" alt="Activities list" />
-        <img src="feedbackcoach.png" alt="AI Coach feedback" />
-       </div>
-      <ul class="ux-notes">
-        <li>Clear activity hierarchy supports quick post-run review.</li>
-        <li>AI translates data into qualitative feedback.</li>
-        <li>Language emphasizes progress rather than performance alone.</li>
-      </ul>
-    </section>
+  <!-- TRAINING PLAN -->
+  <section class="case-section">
+    <h2>Structured training plans</h2>
+    <p>
+      Weekly plans created continuity and reduced decision fatigue.
+    </p>
 
-    <!-- PLAN -->
-    <section class="case-section case-screens side-layout">
-      <h3>Your Plan: training plan and continuity</h3>
+    <div class="case-gallery two">
+      <img src="yourplan.png" alt="Training plan">
+      <img src="pr-activities.png" alt="Activity overview">
+    </div>
+  </section>
 
-      <div class="side-wrapper">
-       <div class="screens-row">
-          <img src="yourplan.png" alt="Weekly training plan" />
-       </div>
+  <!-- AI COACH -->
+  <section class="case-section">
+    <h2>AI Coach interaction</h2>
+    <p>
+      Conversation design simplified complexity and increased trust.
+      AI was framed as guidance rather than control.
+    </p>
 
-      <ul class="ux-notes">
-        <li>Weekly plans provide immediate clarity on next actions.</li>
-        <li>Positive reinforcement supports habit formation.</li>
-        <li>Structure reduces the feeling of restarting each week.</li>
-      </ul>
-      </div>
-    </section>
+    <div class="case-gallery two">
+      <img src="pr-coach.png" alt="AI Coach chat">
+      <img src="feedbackcoach.png" alt="Post run feedback">
+    </div>
+  </section>
 
-    <!-- AI COACH -->
-    <section class="case-section case-screens side-layout">
-      <h3>AI Coach: explaining the value of artificial intelligence</h3>
+  <!-- PAYWALL -->
+  <section class="case-section">
+    <h2>Monetization & value perception</h2>
+    <p>
+      Paywall messaging shifted from feature-based to outcome-based framing.
+      Premium access was introduced after value perception.
+    </p>
 
-      <div class="side-wrapper">
-      <div class="screens-row">
-      <img src="pr-coach.png" alt="Chat with the Coach" />
-      </div>
+    <div class="case-gallery">
+      <img src="pr-paywall.png" alt="Paywall screen">
+    </div>
+  </section>
 
-       <ul class="ux-notes">
-        <li>Conversation design reduces perceived complexity.</li>
-        <li>Transparency builds trust in recommendations.</li>
-        <li>AI acts as guidance, not control.</li>
-      </ul>
-        </div>
-    </section>
+  <!-- IMPACT -->
+  <section class="case-section">
+    <h2>Impact</h2>
+    <ul>
+      <li>Higher onboarding completion</li>
+      <li>Better understanding of AI value</li>
+      <li>Stronger perceived balance between UX and business</li>
+    </ul>
 
-    <!-- ONBOARDING -->
-    <section class="case-section case-screens">
-      <h3>Onboarding: reducing friction and misaligned expectations</h3>
+    <p>
+      ProRun demonstrates how emotional engagement,
+      behavioral design and business alignment can coexist in a B2C product.
+    </p>
+  </section>
 
-      <div class="screens-row">
-      <img src="splash.png" alt="Splashscreen" />
-      <img src="ob2.png" alt="Onboarding" />
-      <img src="ob1.png" alt="Onboarding" />
-      <img src="signup.png" alt="Sign up" />
-      </div>
+  <a href="index.html" class="back-link">← Back to selected work</a>
 
-      <ul class="ux-notes">
-        <li>Progressive disclosure prevents overload.</li>
-        <li>Focus on personal goals rather than features.</li>
-        <li>Value proposition communicated early.</li>
-      </ul>
-    </section>
+</main>
 
-    <!-- PAYWALL -->
-    <section class="case-section case-screens side-layout">
-      <h3>Paywall and CTA: UX and business balance</h3>
+<footer>
+  <p>&copy; 2026 Lorenzo Cavalieri. All rights reserved.</p>
+</footer>
 
-       <div class="side-wrapper">
-       <div class="screens-row">
-       <img src="pr-paywall.png" alt="Paywall" />
-      </div>
+<script>
+  const toggleBtn = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
 
-      <ul class="ux-notes">
-        <li>Introduced after value perception.</li>
-        <li>Benefits framed around goals and outcomes.</li>
-        <li>Clear CTAs reduce decision friction.</li>
-      </ul>
-         </div>
-    </section>
-
-    <!-- YOU -->
-    <section class="case-section case-screens">
-      <h3>"You" section: gamification and motivation</h3>
-      
-      <div class="screens-row">
-      <img src="yousection.png" alt="Profile section" />
-      <img src="younewlevel.png" alt="Progress made with new PRs" />
-      </div>
-
-      <ul class="ux-notes">
-        <li>Progress visualized in simple, understandable ways.</li>
-        <li>Light gamification supports engagement without pressure.</li>
-        <li>Achievement moments reinforce emotional connection.</li>
-      </ul>
-    </section>
-
-    <!-- RESULTS -->
-    <section class="case-section">
-      <h2>Results</h2>
-
-      <ul>
-        <li><strong>Estimated increase in onboarding completion</strong>, driven by improved early clarity</li>
-        <li><strong>Better understanding of AI value</strong> during initial usage sessions</li>
-        <li><strong>Improved perceived balance</strong> between value and premium offering</li>
-      </ul>
-
-      <p>
-        This project allowed me to work on a B2C product where
-        <strong>motivation, clarity and trust</strong> are central to the experience
-        and directly connected to business goals.
-      </p>
-    </section>
-
-    <!-- CLOSING -->
-    <section class="case-section">
-      <h2>Closing</h2>
-      <p>
-        <strong>ProRun</strong> represents an example of product-oriented UX,
-        where design decisions align user behavior, emotional engagement
-        and business objectives throughout the entire user lifecycle.
-      </p>
-       <a href="index.html" class="back-link">← Back to selected work</a>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Lorenzo Cavalieri. All rights reserved.</p>
-  </footer>
-
-  <!-- JS (menu) -->
-  <script>
-    const toggleBtn = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    toggleBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("open");
-      toggleBtn.innerHTML = mobileMenu.classList.contains("open") ? "&times;" : "&#9776;";
-    });
-
-    document.querySelectorAll(".mobile-nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.remove("open");
-        toggleBtn.innerHTML = "&#9776;";
-      });
-    });
-  </script>
+  toggleBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+    toggleBtn.innerHTML = mobileMenu.classList.contains("open") ? "&times;" : "&#9776;";
+  });
+</script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
