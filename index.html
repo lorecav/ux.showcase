@@ -3,101 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="ux-logo-designer-favicon.png" type="image/png" />
-  <title>Lorenzo Cavalieri – UX/UI Portfolio</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Lorenzo Cavalieri – Product Designer</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <div class="background-wrapper">
-    <img src="glassbg.jpg" alt="background" class="bg-img" />
-  </div>
-  <div class="background-overlay"></div>
 
-  <header>
-    <nav class="navbar">
-      <div class="logo-container">
-        <a href="index.html">
-          <img src="ux-logo-designer.png" alt="Logo" class="site-logo" />
-        </a>
-      </div>
-
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About me</a></li>
-        <li><a href="contact.html">Contact me</a></li>
-      </ul>
-    </nav>
-
-    <div class="mobile-menu" id="mobile-menu">
-      <ul class="mobile-nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About me</a></li>
-        <li><a href="contact.html">Contact me</a></li>
-      </ul>
+<header>
+  <nav class="navbar">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="ux-logo-designer.png" alt="Logo" class="site-logo" />
+      </a>
     </div>
-  </header>
 
-  <main class="portfolio">
-    <div class="container">
-<section class="intro">
-  <h1>Product Designer</h1>
-  <p> From research to high-fidelity.<br/>
-    Turning user needs into business results.<br/><br/>
-    <span class="intro-sub">
-     A selection of real-world projects tackling complex UX and product challenges:
-    </span>
-  </p>
-</section>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About me</a></li>
+      <li><a href="contact.html">Contact me</a></li>
+    </ul>
 
-    <section class="projects">
-<div class="project-card">
- <img src="designsystem.jpg" alt="ErreQuadro B2B SaaS" />
- <div class="card-content">
-<h3>B2B Data-Heavy Platform</h3>
-<p> UX design for a complex SaaS product handling large volumes of structured data.
-      Focus on data tables, design system and cognitive support for expert users.</p>
-  <a href="errequadro.html" class="cta-button">View Case Study</a>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About me</a></li>
+      <li><a href="contact.html">Contact me</a></li>
+    </ul>
   </div>
-</div>
+</header>
+
+<main>
+
+  <section class="intro">
+    <h1>Product Designer</h1>
+    <p>
+      From research to high-fidelity.
+      Turning user needs into business results.<br/>
+      <span class="intro-sub">
+        Real-world projects tackling complex UX and product challenges.
+      </span>
+    </p>
+  </section>
+
+  <section class="projects">
 
     <div class="project-card">
-  <img src="prorun.jpg" alt="ProRun AI Running App" />
-  <div class="card-content">
-    <h3>AI-Powered Running App</h3>
-    <p> Mobile product focused on onboarding, motivation and monetization.
-      Designed an AI coach experience balancing user trust and business goals.
-    </p>
-    <a href="prorun.html" class="cta-button">View Case Study</a>
-  </div>
-</div>
-    </section>
-
-    <!-- BRANDS SECTION -->
-    <section class="brands">
-      <h2>Brands I’ve worked with</h2>
-      <div class="carousel-container">
-        <div class="carousel-track" id="brand-carousel">
-          <img src="flowpay.png" alt="Brand 1" class="brand-logo" />
-          <img src="canarbino.png" alt="Brand 2" class="brand-logo" />
-          <img src="unieuro.png" alt="Brand 3" class="brand-logo" />
-          <img src="tke.png" alt="Brand 4" class="brand-logo" />
-          <img src="municipia.png" alt="Brand 5" class="brand-logo" />
-          <img src="wolterskluwer.png" alt="Brand 6" class="brand-logo" />
-        </div>
+      <img src="errequadro-thumb.png" alt="B2B Platform" />
+      <div class="card-content">
+        <h3>B2B Data-Heavy Platform</h3>
+        <p>
+          UX design for a complex SaaS product handling large volumes of structured data.
+          Focus on data tables, design system and cognitive support for expert users.
+        </p>
+        <a href="errequadro.html" class="cta-button">View Case Study</a>
       </div>
-    </section>
     </div>
-  </main>
 
-  <footer>
-    <p>&copy; 2026 Lorenzo Cavalieri. All rights reserved.</p>
-  </footer>
+    <div class="project-card">
+      <img src="prorun-thumb.png" alt="AI Running App" />
+      <div class="card-content">
+        <h3>AI-Powered Running App</h3>
+        <p>
+          Mobile product focused on onboarding, motivation and monetization.
+          Designed an AI coach experience balancing user trust and business goals.
+        </p>
+        <a href="prorun.html" class="cta-button">View Case Study</a>
+      </div>
+    </div>
 
-  <!-- JAVASCRIPT -->
- <script>
-  // MENU MOBILE
+  </section>
+
+  <section class="brands">
+    <h2>Brands I’ve worked with</h2>
+    <div class="brands-row">
+      <img src="flowpay.png" alt="Flowpay" />
+      <img src="canarbino.png" alt="Canarbino" />
+      <img src="unieuro.png" alt="Unieuro" />
+      <img src="tke.png" alt="TK Elevator" />
+      <img src="municipia.png" alt="Municipia" />
+      <img src="wolterskluwer.png" alt="Wolters Kluwer" />
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Lorenzo Cavalieri. All rights reserved.</p>
+</footer>
+
+<script>
   const toggleBtn = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
 
@@ -105,77 +106,7 @@
     mobileMenu.classList.toggle("open");
     toggleBtn.innerHTML = mobileMenu.classList.contains("open") ? "&times;" : "&#9776;";
   });
-
-  document.querySelectorAll(".mobile-nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.remove("open");
-      toggleBtn.innerHTML = "&#9776;";
-    });
-  });
-
-  // CAROUSEL AUTO SCROLL - SOLO SU MOBILE
-  const carousel = document.getElementById("brand-carousel");
-
-  function isMobile() {
-    return window.innerWidth <= 768;
-  }
-
-  function duplicateLogos() {
-    if (!carousel.classList.contains("duplicated")) {
-      const logos = carousel.innerHTML;
-      carousel.innerHTML += logos;
-      carousel.classList.add("duplicated");
-    }
-  }
-
-  function startAutoScroll() {
-    if (!isMobile()) return;
-    duplicateLogos();
-    carousel.classList.add("auto-scroll");
-  }
-
-  function stopAutoScroll() {
-    carousel.classList.remove("auto-scroll");
-  }
-
-  // Avvio all'onload
-  window.addEventListener("load", () => {
-    startAutoScroll();
-  });
-
-  // Gestione resize
-  window.addEventListener("resize", () => {
-    stopAutoScroll();
-    if (isMobile()) startAutoScroll();
-  });
-
-  // Interruzione se l’utente tocca
-  carousel.addEventListener("pointerdown", () => stopAutoScroll());
-  carousel.addEventListener("pointerup", () => startAutoScroll());
 </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
